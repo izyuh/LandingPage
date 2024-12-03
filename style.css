@@ -1,0 +1,155 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url(/assets/andrej-lisakov-V2OyJtFqEtY-unsplash.jpg);
+    background-size: 100vw;
+    color: aliceblue;
+    font-size: 30px;
+    padding: 0 35px;
+}
+
+/* *********** Header ***************** */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+header h1 {
+    font-size: 2.5em;
+}
+
+header button {
+    border-radius: 10px;
+    border: none;
+    padding: 15px 25px;
+    box-shadow: 4px 4px 4px black;
+    cursor: pointer;
+    font-weight: 900;
+    align-self: center;
+}
+
+header button:hover {
+    translate: -2px -2px;
+}
+
+header button:active {
+    translate: 2px 2px
+}
+
+/* ************* Hero ********************* */
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 100px);
+    padding: 0 100px;
+}
+
+.hero p {
+    line-height: 50px;
+    text-indent: 35px;
+    font-size: 1.4em;
+}
+
+.hero img {
+    width: 45%;
+    border-radius: 50%;
+    margin-left: 50px;
+}
+
+/*********** Skills Section ******** */
+
+.skills {
+    margin-top: 30px;
+    min-height: 100vh;
+}
+
+.skills h2 {
+    display: flex;
+    justify-content: center;
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+.skills h3 {
+    font-size: 1.6em;
+}
+
+.skills ul {
+    list-style-type: none;
+    margin: 20px 10px 80px 20px;
+}
+
+.skills ul li {
+    display: inline-block;
+    text-wrap: nowrap;
+    background-color: white;
+    color: black;
+    padding: 20px 55px;
+    margin: 10px 0;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.404);
+    transition: all .2s ease;
+    font-size: 1.1em;
+}
+
+.skills ul li:hover { 
+    transform: scale(1.2);
+    outline: 1px solid;
+}
+
+/* ************ Projects ******************** */
+
+.projects > * {
+    margin-bottom: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.projects a, .projects a:visited {
+    color: white;
+}
+
+.projects h2 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+    font-size: 1.6em;
+}
+
+/* .projects .project1 {
+    display: flex;
+    align-items: center;
+} */
+
+.projects img {
+    border-radius: 30px;
+}
+
+.projects .project-content {
+    margin: 40px;
+}
+
+.projects .project-content h4 {
+    display: flex;
+    justify-content: center;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.projects .project-content p {
+    text-indent: 35px;
+}
+
+/* .projects .project2 {
+    display: flex;
+    align-items: center;
+} */

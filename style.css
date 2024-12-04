@@ -5,7 +5,7 @@
 }
 
 body {
-    background: url/assets/andrej-lisakov-V2OyJtFqEtY-unsplash.jpg);
+    background: url(./assets/andrej-lisakov-V2OyJtFqEtY-unsplash.jpg);
     background-size: 100vw;
     color: aliceblue;
     font-size: 30px;

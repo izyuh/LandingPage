@@ -5,8 +5,11 @@
 }
 
 body {
-    background: url('./assets/andrej-lisakov-V2OyJtFqEtY-unsplash.jpg');
-    background-size: 100vw;
+    background-image: url('./assets/andrej-lisakov-V2OyJtFqEtY-unsplash.jpg'),
+                      url('./assets/andrej-lisakov-V2OyJtFqEtY-unsplash.jpg');
+    background-repeat: repeat-y; 
+    background-size: 100%; /* Ensure both layers cover the same space */
+    transform: none, rotate(180deg);
     color: aliceblue;
     font-size: 30px;
     padding: 0 35px;
@@ -92,7 +95,7 @@ header button:active {
     text-wrap: nowrap;
     background-color: white;
     color: black;
-    padding: 20px 55px;
+    padding: 15px 55px;
     margin: 10px 0;
     border-radius: 10px;
     cursor: pointer;
@@ -125,11 +128,6 @@ header button:active {
     font-size: 1.6em;
 }
 
-/* .projects .project1 {
-    display: flex;
-    align-items: center;
-} */
-
 .projects img {
     border-radius: 30px;
 }
@@ -149,7 +147,26 @@ header button:active {
     text-indent: 35px;
 }
 
-/* .projects .project2 {
+/* ********** Footer ************** */
+
+footer {
     display: flex;
-    align-items: center;
-} */
+    align-items: flex-end;
+    margin-top: 90px;
+}
+
+footer .contact-links {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+footer .contact-links a {
+    display: flex;
+    justify-content: space-between;
+    transition: .2s all ease;
+}
+
+footer .contact-links a:hover {
+    scale: 1.2;
+}

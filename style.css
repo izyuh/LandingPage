@@ -10,7 +10,7 @@ body {
   background-repeat: repeat-y;
   background-size: 100%; /* Ensure both layers cover the same space */
   transform: none, rotate(180deg);
-  color: aliceblue;
+  color: white;
   font-size: 30px;
 }
 
@@ -19,8 +19,10 @@ body {
 header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin: 20px 0;
-  padding: 0 35px;
+  padding: 0 35px 35px 35px;
+  outline: 3px solid rgb(75, 217, 75);
 }
 
 header h1 {
@@ -51,8 +53,9 @@ header button:active {
   display: grid;
   grid-template-columns: 2fr minmax(500px, 1.4fr);
   align-items: center;
-  height: calc(100vh - 100px);
+  min-height: calc(100vh - 100px);
   padding: 0 100px;
+  outline: 3px solid yellow;
 }
 
 .hero p {
@@ -184,6 +187,26 @@ footer .contact-links a:hover {
 }
 
 /* **************************** Media Q's ************************** */
+@media (max-width:580px) {
+
+  header h1 {
+    font-size: 1.4em;
+  }
+
+  .skills ul li {
+    font-size: .6em;
+    padding: 10px 20px;
+  }
+}
+
+
+@media (max-width: 730px) {
+
+  .hero p {
+    font-size: .8em;
+  }
+
+}
 
 @media (max-width: 1200px) {
   .hero {
@@ -193,6 +216,7 @@ footer .contact-links a:hover {
 
   .hero img {
     width: 50%;
+    margin-bottom: 80px;
   }
 }
 

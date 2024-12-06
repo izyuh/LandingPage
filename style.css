@@ -4,13 +4,27 @@
   box-sizing: border-box;
 }
 
+:root {
+  --background-image: url("./assets/andrej-lisakov-V2OyJtFqEtY-unsplash.jpg");
+  --primary-color: white;
+  --secondary-color: black;
+  --shadow-color: rgba(0, 0, 0, 0.4);
+}
+
+.dark-theme {
+  --background-image: url("./assets/dark-background.jpg");
+  --primary-color: white;
+  --secondary-color: black;
+  --shadow-color: rgba(255, 255, 255, 0.4);
+
+}
+
 body {
-  background-image: url("./assets/andrej-lisakov-V2OyJtFqEtY-unsplash.jpg"),
-    url("./assets/andrej-lisakov-V2OyJtFqEtY-unsplash.jpg");
+  background-image: var(--background-image);
   background-repeat: repeat-y;
   background-size: 100%; /* Ensure both layers cover the same space */
   transform: none, rotate(180deg);
-  color: white;
+  color: var(--primary-color);
   font-size: 30px;
 }
 
@@ -21,8 +35,7 @@ header {
   justify-content: space-between;
   align-items: center;
   margin: 20px 0;
-  padding: 0 35px 35px 35px;
-  outline: 3px solid rgb(75, 217, 75);
+  padding: 0 35px;
 }
 
 header h1 {
@@ -33,7 +46,8 @@ header button {
   border-radius: 10px;
   border: none;
   padding: 15px 25px;
-  box-shadow: 4px 4px 4px black;
+  margin-left: 20px;
+  box-shadow: 4px 4px 4px var(--shadow-color);
   cursor: pointer;
   font-weight: 900;
   align-self: center;
@@ -53,9 +67,8 @@ header button:active {
   display: grid;
   grid-template-columns: 2fr minmax(500px, 1.4fr);
   align-items: center;
-  min-height: calc(100vh - 100px);
+  min-height: 100vh;
   padding: 0 100px;
-  outline: 3px solid yellow;
 }
 
 .hero p {
@@ -97,15 +110,16 @@ header button:active {
 .skills ul li {
   display: inline-block;
   text-wrap: nowrap;
-  background-color: white;
-  color: black;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
   padding: 15px 55px;
   margin: 10px 0;
   border-radius: 10px;
   cursor: pointer;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.404);
+  box-shadow: 5px 5px 5px var(--shadow-color);
   transition: all 0.2s ease;
   font-size: 1.1em;
+  user-select: none;
 }
 
 .skills ul li:hover {
@@ -124,7 +138,7 @@ header button:active {
 
 .projects a,
 .projects a:visited {
-  color: white;
+  color: var(--primary-color);
 }
 
 .projects h2 {
@@ -136,7 +150,7 @@ header button:active {
 
 .projects img {
   border-radius: 30px;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.438);
+  box-shadow: 5px 5px 5px var(--shadow-color);
   transition: all 0.5s ease;
 }
 
@@ -187,25 +201,37 @@ footer .contact-links a:hover {
 }
 
 /* **************************** Media Q's ************************** */
-@media (max-width:580px) {
-
+@media (max-width: 580px) {
   header h1 {
     font-size: 1.4em;
   }
 
+  .hero {
+    padding: 0 50px;
+  }
+
   .skills ul li {
-    font-size: .6em;
+    font-size: 0.6em;
     padding: 10px 20px;
+  }
+
+  .projects .project-content p {
+    font-size: 0.9em;
   }
 }
 
-
 @media (max-width: 730px) {
-
-  .hero p {
-    font-size: .8em;
+  .header {
+    margin: 0;
   }
 
+  .hero {
+    min-height: 70vh;
+  }
+
+  .hero p {
+    font-size: 0.8em;
+  }
 }
 
 @media (max-width: 1200px) {

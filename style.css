@@ -16,14 +16,12 @@
   --primary-color: white;
   --secondary-color: black;
   --shadow-color: rgba(255, 255, 255, 0.4);
-
 }
 
 body {
   background-image: var(--background-image);
-  background-repeat: repeat-y;
-  background-size: 100%; /* Ensure both layers cover the same space */
-  transform: none, rotate(180deg);
+  background-size: 100%;
+  background-repeat: repeat;
   color: var(--primary-color);
   font-size: 30px;
 }
@@ -67,7 +65,7 @@ header button:active {
   display: grid;
   grid-template-columns: 2fr minmax(500px, 1.4fr);
   align-items: center;
-  min-height: 100vh;
+  min-height: calc(100vh - 100px);
   padding: 0 100px;
 }
 
@@ -201,6 +199,7 @@ footer .contact-links a:hover {
 }
 
 /* **************************** Media Q's ************************** */
+
 @media (max-width: 580px) {
   header h1 {
     font-size: 1.4em;
@@ -208,6 +207,7 @@ footer .contact-links a:hover {
 
   .hero {
     padding: 0 50px;
+    margin-top: 40px;
   }
 
   .skills ul li {
@@ -243,6 +243,7 @@ footer .contact-links a:hover {
   .hero img {
     width: 50%;
     margin-bottom: 80px;
+    margin-left: 0px;
   }
 }
 

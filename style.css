@@ -151,6 +151,7 @@ header button:active {
   max-height: 900px;
   overflow: hidden;
   display: block;
+  transition: all 0.5s ease;
 }
 
 .projects img {
@@ -162,7 +163,7 @@ header button:active {
   object-fit: contain;
 }
 
-.projects img:hover {
+.projects a:hover {
   scale: 1.05;
 }
 

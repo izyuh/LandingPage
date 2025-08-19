@@ -46,10 +46,11 @@ header h1 {
 header button {
   border-radius: 10px;
   border: none;
-  padding: 15px 25px;
+  padding: clamp(0.5em, 1vw, 1em) 1.5em;
   margin-left: 20px;
   box-shadow: 4px 4px 4px var(--shadow-color);
   cursor: pointer;
+  font-size: clamp(0.4em, 1.5vw, 1.2em);
   font-weight: 900;
   align-self: center;
 }
@@ -73,9 +74,9 @@ header button:active {
 }
 
 .hero p {
-  line-height: 50px;
+  line-height: clamp(1.2em, 2vw, 1.6em);
   text-indent: 35px;
-  font-size: clamp(1.2em, 2vw, 1.6em);
+  font-size: clamp(.7em, 2vw, 1.6em);
 }
 
 .hero img {
@@ -155,13 +156,15 @@ header button:active {
   overflow: hidden;
   display: block;
   transition: all 0.5s ease;
+  text-align: center;
+    border-radius: 30px;
 }
 
 .projects img {
   width: 100%;
   aspect-ratio: 16/9;
   object-fit: cover;
-  border-radius: 30px;
+
   transition: all 0.5s ease;
   display: block;
 }
@@ -188,7 +191,9 @@ header button:active {
 }
 
 .projects .project-content p {
-  text-indent: 35px;
+  font-size: clamp(.7em, 2vw, 1.6em);
+  line-height: 1.6;
+  margin-bottom: 20px;
 }
 
 /* ********** Footer ************** */
@@ -216,6 +221,18 @@ footer .contact-links a:hover {
 /* **************************** Media Q's ************************** */
 
 @media (max-width: 580px) {
+
+  header {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  header button {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+  }
+
   .hero {
     padding: 0 50px;
     margin-top: 40px;
@@ -223,6 +240,14 @@ footer .contact-links a:hover {
 
   .skills ul li {
     padding: 10px 20px;
+  }
+
+  .projects .project-content {
+    padding: 20px 0;
+  }
+
+  .projects .project-content p {
+    padding: 20px 0;
   }
 }
 
